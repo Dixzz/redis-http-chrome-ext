@@ -1,0 +1,21 @@
+{
+    "name": "Context Menus Sample",
+    "description": "Shows some of the features of the Context Menus API",
+    "version": "0.0.1",
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "match_origin_as_fallback": true,
+          "js": ["socket.js"]
+        }
+    ],
+    "manifest_version": 3
+  }
